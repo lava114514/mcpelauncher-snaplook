@@ -63,7 +63,7 @@ extern "C" __attribute__((visibility("default"))) void mod_init() {
     auto VanillaCameraAPI_typeinfo_name = hat::find_pattern(range1, hat::object_to_signature("16VanillaCameraAPI")).get();
     auto VanillaCameraAPI_typeinfo = hat::find_pattern(range2, hat::object_to_signature(VanillaCameraAPI_typeinfo_name)).get() - sizeof(void*);
     auto VanillaCameraAPI_vtable = hat::find_pattern(range2, hat::object_to_signature(VanillaCameraAPI_typeinfo)).get() + sizeof(void*);
-    auto VanillaCameraAPI_getPlayerViewPerspectiveOption = reinterpret_cast<int (**)(void*)>(VanillaCameraAPI_vtable) + 6;  // Change to 7 when 1.21.80 releases
+    auto VanillaCameraAPI_getPlayerViewPerspectiveOption = reinterpret_cast<int (**)(void*)>(VanillaCameraAPI_vtable) + 7;
 
     VanillaCameraAPI_getPlayerViewPerspectiveOption_orig = *VanillaCameraAPI_getPlayerViewPerspectiveOption;
 
