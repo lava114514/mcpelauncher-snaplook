@@ -4,7 +4,7 @@
 
 int Snaplook::getPerspectiveOption(void* t) {
     if(inSnaplook) {
-        return 3;  // third person front
+        return 1;  // third person back
     }
     return VanillaCameraAPI_getPlayerViewPerspectiveOption_orig(t);
 }
